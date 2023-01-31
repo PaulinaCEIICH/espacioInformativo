@@ -16,11 +16,11 @@ session_start();
     <link rel="icon" href="../src/images/logoCeiich.png">
     <meta name="description" content="Pagina principal del Centro de Investigaciones Interdiciplinarias en Ciencias y Humanidades">
         <!-- Estilos de FontAwesome -->
-        <link rel="stylesheet" href="../styles/libraries/fontawesome-5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="./styles/libraries/fontawesome-5.15.1/css/all.min.css">
          <!-- Swiper IO -->
-        <link rel="stylesheet" href="../styles/libraries/Swiper/swiper.min.css">
+        <link rel="stylesheet" href="./styles/libraries/Swiper/swiper.min.css">
         <!-- Estilos del sitio -->
-        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="./styles/styles.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
         <script type="text/javascript" src="/media/js/site.js?_=1d5abd169416a09a2b389885211721dd" data-domain="datatables.net" data-api="https://plausible.sprymedia.co.uk/api/event"></script>
@@ -78,7 +78,19 @@ $(document).ready(function () {
             <div id="example_filter" class="dataTables_filter" align="right">
               <label>Buscar:<input type="search" class="" placeholder="" aria-controls="example"></label>
             </div>
-            <table data-order='[[ 3, "asc" ]]' id="example" class="display dataTable" style="width:100%">
+                        
+            
+            <section class="organos">
+   
+            <div class="hov">
+              <a href="javascript:mostrarConsejoInterno();"><i class="fas fa-dice-d20"> CONSEJO INTERNO</i></a>
+              <div id="flotanteConsejo" class="flotante">
+                <a href="javascript:cerrarConsejoInterno();"><i2 class="fas fa-times-circle"></i2></a>
+                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/CalendarioDeSesionesCI2022.pdf" target="_blank">Calendario de sesiones, 2022</a>
+                <h3>ACTAS:</h3>
+                <p><b>2016 <a href="#" onclick="mostrar(this,'oculto'); return false" />[+]</a></b></p>
+                <div id="oculto" class="actas" style="display:none">
+                  <table data-order='[[ 3, "asc" ]]' id="example" class="display dataTable" style="width:100%">
               <thead>
                 <tr>
                   <th class="sorting sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending" style="width: 123px;">Nombre</th>
@@ -139,19 +151,9 @@ $(document).ready(function () {
                   <td><a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/14. 2 de mayo.pdf" target="_blank">Ver</a></td>
                 </tr>      
               </tbody> 
-            </table></div></div>
-                        
-            
-            <section class="organos">
-   
-            <div class="hov">
-              <a href="javascript:mostrarConsejoInterno();"><i class="fas fa-dice-d20"> CONSEJO INTERNO</i></a>
-              <div id="flotanteConsejo" class="flotante">
-                <a href="javascript:cerrarConsejoInterno();"><i2 class="fas fa-times-circle"></i2></a>
-                <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/CalendarioDeSesionesCI2022.pdf" target="_blank">Calendario de sesiones, 2022</a>
-                <h3>ACTAS:</h3>
-                <p><b>2016 <a href="#" onclick="mostrar(this,'oculto'); return false" />[+]</a></b></p>
-                <div id="oculto" class="actas" style="display:none">
+            </table>
+
+
                   <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/9. 29 de marzo.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 29 de marzo</i2></a><br>
                   <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/10. 12 de abril.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 12 de abril</i2></a><br>
                   <a href="http://computo.ceiich.unam.mx/webceiich/docs/actas/11. 12 de abril complementaria.pdf" target="_blank"><i2 class="fas fa-angle-right"> Acta del 12 de abril, complementaria</i2></a><br>
